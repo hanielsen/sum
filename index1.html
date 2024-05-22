@@ -2,116 +2,18 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Antal primtal</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="icon" href="snake.ico">
-
-<style>
-body 
-{
-    font-family:sans-serif;
-}
-
-.lb1 
-{
-    display:block;
-    margin-top:1em;
-    margin-bottom:1em;
-}
-
-#i1, #i2 
-{
-    text-align:right;
-    text-transform:lowercase;
-    margin-left:.5em;
-}
-
-#i1, #i2 
-{
-    width:4em;
-}
-
-.fc
-{
-    display:inline-block;
-    width:1.1em;
-    margin-bottom:.1em;    
-    text-align:center;
-}
-
-h2 
-{
-    margin-bottom:0em;
-    font-size:1.25em;
-}
-
-h1 
-{
-    font-size:1.5em;
-}
-
-#ord1, #ord2, #ord3, #ord4, #ord5 
-{
-    display:inline;
-    float:left;
-    margin-top:.25em;
-    margin-right:1em;
-    text-transform:lowercase;
-}
-
-input[type="button"] 
-{
-    background-color: #d8d8d8;
-    color: black;
-    padding: 4px;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-    margin-right:.5em;
-    border-radius:0em;
-}
-</style>
+<title>sum</title>
 </head>
 
 <body>
-    <h2>Beregn antal printal mindre end "Grænse"</h2>
-    <form>
-        <label class="lb1">
-            Grænse&nbsp;&nbsp;<input id="i1" type="text" size="10" inputmode="numeric">
-            &nbsp;&nbsp;<input type="button" onclick="vis()" value="Beregn">
-        </label>
-    </form>
-    
-    <p id="mo">Antal<p>
+<p>Tast tal <input id="i1" type=text"></p>
+<p><input type="button" onclick="vis()" value="Beregn" ></p>
+<p id="p1"></p>
+<p id="p2"></p>
 
-<script>
-
-var sp1=document.getElementById("i1");
-var mmo=document.getElementById("mo");
-
-function count_primes(n)
-{
-    var ctr =0;
-    for (var num=1;num<=n;num++)
-    {
-        k = Math.floor(Math.sqrt(num)+1);
-        for (var i=2;i<=k;i++)
-        {
-            if (num%i==0) break;
-            else if (i==k) ctr++;
-         }
-    }
-    return ctr;
-}
-
-function vis() 
-{
-    var sp1v=sp1.value;
-    mmo.innerHTML = "Antal " + count_primes(sp1v);
-}
+<script src="sum01.js">
 
 </script>
+
 </body>
 </html>

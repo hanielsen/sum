@@ -1,29 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>sum</title>
-<style>
-body 
-{
-    font-family:sans-serif;
-}
-.p1
-{
-    font-size:1.3em;
-}
-</style>
-
-</head>
-
-<body>
-<p class="p1">Beregn sum og tidsforbrug</p>
-<p>Tast tal <input id="i1" type=text"></p>
-<p><input type="button" onclick="vis()" value="Beregn" ></p>
-<p id="p1"></p>
-<p id="p2"></p>
-
-<script>
 var sp1=document.getElementById("i1");
 var sp2=document.getElementById("p1");
 var sp3=document.getElementById("p2");
@@ -47,8 +21,3 @@ function vis()
     sp2.innerHTML = "Sum = " + s;
     sp3.innerHTML = "Tidsforbrug: " + (t1-t0) + " ms";
 }
-
-</script>
-
-</body>
-</html>
